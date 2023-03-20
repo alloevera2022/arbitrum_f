@@ -1,0 +1,352 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+ 
+    
+    
+}
+
+
+body {
+
+    background-image: url(../arbitrum_f/img/K2fsiTSV_4x.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh; 
+    background-attachment: fixed;
+}
+
+.navbar{
+    padding: 20px;
+    background-color: transparent!important;
+    position: sticky !important;
+}
+
+
+.navbar-brand {
+    color: white;
+    font-size: 3rem;
+}
+
+.navbar-nav {
+    font-size: 1.2rem;
+    padding-left: 40px; 
+    
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+.header_title {
+    text-transform: uppercase;
+    font-size: 40px;
+    color: black; 
+    margin-top: 100px; 
+    margin-bottom: 10px;
+    line-height: normal;
+    
+}
+
+.header_subtitle {
+    font-size: 20px;
+
+}
+
+.header_title2 {
+    text-transform: uppercase;
+    font-size: 26px;
+    color: black; 
+    margin-top: 280px; 
+   
+    line-height: normal;
+    
+}
+
+.header_subtitle2 {
+    text-transform: uppercase;
+    font-size: 26px;
+    color: black; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+    line-height: normal;
+    
+}
+
+.header_subtitle3 {
+    text-transform: uppercase;
+    font-size: 26px;
+    color: black; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: normal;
+    
+}
+
+#connectwallet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn_connectwallet {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+   
+
+    
+}
+
+.btn_connectwallet:hover {
+
+    color: #72b5f3;
+
+}
+
+
+.logo_listfooter {
+    padding-top: 20px;
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+  
+  }
+  
+.logo_footer {
+      text-decoration: none;
+      color: #282829;
+      font-size: 42px;
+      display: flex;
+      padding: 20px;
+  
+  }
+
+.logo_footer:hover {
+    color: #72b5f3;
+}
+
+
+@media (max-width: 1400px) {
+
+    
+.header_title {
+    font-size: 34px;    
+}
+
+.btn_connectwallet {
+    font-size: 1.6rem;    
+}
+
+.header_title2 {
+    font-size: 22px;
+    margin-top: 280px; 
+    
+}
+
+.header_subtitle2 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+   
+}
+
+.header_subtitle3 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+    
+}
+
+@media (max-width: 1200px) {
+
+    .header_title {
+        font-size: 32px;    
+    }
+
+
+    .btn_connectwallet {
+        font-size: 1.3rem;        
+    }
+
+    .logo_footer {
+
+        font-size: 34px;
+
+    
+    }
+
+    .header_title2 {
+        font-size: 20px;
+        margin-top: 280px; 
+        
+    }
+    
+    .header_subtitle2 {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+       
+    }
+    
+    .header_subtitle3 {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+
+    .header_title {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 32px;
+        color: black; 
+        margin-top: 100px; 
+        margin-bottom: 10px;
+        line-height: normal;
+        
+    }
+
+    .header_subtitle {
+        font-size: 20px;
+        text-align: center;
+    
+    }
+
+    .btn_connectwallet {
+        font-size: 1.5rem;
+        
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        
+    }
+
+    .btn_connectwallet {
+        font-size: 1.3rem;
+        
+    
+        
+    }
+
+    
+    .header_title2 {
+        font-size: 16px;
+        margin-top: 280px; 
+        
+    }
+    
+    .header_subtitle2 {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+       
+    }
+    
+    .header_subtitle3 {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    
+
+}
+
+
+@media (max-width: 767px) {
+    body {
+
+        background-image: url(../arbitrum_f/img/bg_767px.png);
+        background-size: cover;
+        height: 100vh;
+    }
+
+    #connectwallet {
+       margin-left: 130px;
+    }
+
+    .logo_listfooter {
+        margin-left: 100px;
+      
+      }
+
+
+      .header_title2 {
+        font-size: 16px;
+        margin-top: 140px;
+        text-align: center;
+        
+    }
+    
+    .header_subtitle2 {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+       
+    }
+    
+    .header_subtitle3 {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+
+        background-image: url(../arbitrum_f/img/bg_420px.png);
+        background-size: cover;
+        height: 100vh;
+    }
+
+    #connectwallet {
+       margin-left: 90px;
+    }
+
+    .logo_listfooter {
+        margin-left: 40px;
+      
+      }
+}
+
+
+@media (max-width: 420px) {
+
+
+    #connectwallet {
+       margin-left: 60px;
+    }
+
+    .logo_listfooter {
+        margin-left: 30px;
+      
+      }
+}
+
+@media (max-width: 300px) {
+
+
+    #connectwallet {
+       margin-left: 20px;
+    }
+
+    .logo_listfooter {
+        margin-left: -10px;
+      
+      }
+}
