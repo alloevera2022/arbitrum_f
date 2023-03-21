@@ -9,27 +9,35 @@
   "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="icon" href="../arbitrum_f/img/x-diamond-fill.svg">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body >
     <div class="firts-screen">
-        
-            <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <section>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#"><i class="bi bi-x-diamond-fill"></i></a>
 
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                      <li class="nav-item dropdown">
-                        <a class="nav-link" href="#about">
-                          About
-                        </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#claim">Claim</a>
                       </li>
 
-                    </ul>  
+                    
+                    </ul>
+
+
+                    
+
                
 
                       <button class="btn btn-outline-dark"><i class="bi bi-wallet2"></i> Connect Wallet</button>  
@@ -101,7 +109,7 @@
 
 
 
-                <div class="container"> 
+                <div class="container_section3"> 
                     <div class="row"> 
     
                         <div class="col-md-7">
@@ -110,7 +118,7 @@
         
                         </div>
     
-                        <div class="col-md-5"> 
+                        <div class="col-md-4"> 
                             <h1 id="about" class="header_title2"><i class="bi bi-broadcast"></i><strong> 2 servers, in the USA AWS (10 Gbit) and Finland Hetzner (1 Gbit). Maximum stability & top equipment</strong></h1><hr>
                             <h2 class="header_subtitle2"><i class="bi bi-safe2"></i><strong> Low probability of DDoS</strong></h2><hr>
                             <h2 class="header_subtitle2"><i class="bi bi-telegram"></i> <strong>Technical support in Russian and English in Telegram</strong></h2><hr>
@@ -124,6 +132,11 @@
                             
 
                         </div>
+                        <div class="col-md-1">
+        
+                                   
+        
+                        </div>
               
                 
                         </div>               
@@ -131,20 +144,95 @@
                     
                     
                     </div>   
-            </div>
+        
 
 
 
          
+             
+
+
+              
+
+        <div class="container">
+
+          <div class="row"> 
+    
+            <div class="col-md-7">
               </div>
+
+              <div class="col-md-5"> 
+
+        <h1 class="header_title2" id="claim"><strong>Claim</strong></h1>
+        <p class="header_subtitle">Block number: <!--{blockNumber}-->, claims start at block <!--{claimPeriodStart?.toNumber()}--></p>
+        <h2 class="header_subtitle2"><b>Output to CEX</b></h2>
+        <p class="header_subtitle">Insert your private keys and deposit addresses into the form below:</p>
+        <p>
+          <textarea> </textarea>
+          <!--
+        <textarea cols={120} rows={15} onChange={(event) => setInputText(event.target.value)} value={inputText}>
+        </textarea>  -->
+        </p>
+
+        <p>
+            <label class="text_checkbox"><input class="form-check-input" type="checkbox" checked={tips} onChange={ () => <!--{ setTips(!tips); } }>--></input>Enable tip 0.1%</label>
+            <label class="text_checkbox"><input class="form-check-input" type="checkbox" checked={crazyMode} onChange={ () => <!--{ setCrazyMode(!crazyMode); } }>--></input>Don't wait for confirmation</label>
+            <button id="btn_check" class="btn btn-dark"onClick={() => <!--  { onSendToCexButtonPressed(); }}> -->Check</button>
+        </p>
+        <h2 class="header_subtitle2"><b>Status</b></h2>
+        <!--   {lastError && <p>{lastError}</p>}   -->
+</div>
+
+
+<div class="container-fluid">
+
+ 
+
+  <div class="table_block">
+  <div class="table-responsive-xl">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"><u>Adress</u></th>
+        <th scope="col"><u>Balance</u></th>
+        <th scope="col"><u>$ARB balance for claim</u></th>
+        <th scope="col"><u>Waiting claim</u></th>
+        <th scope="col"><u>Claim</u></th>
+        <th scope="col"><u>Transaction</u></th>
+        <th scope="col"><u>Ready</u></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- {wallets.map((wallet, index) => {return (  -->    
+           <tr key={index}>
+           <td>{wallet.address}</td>
+               <td>{nativeBalances[index]?.toString()}</td>
+               <td>{claimableBalances[index]?.toString()}</td>
+               <td>{transactionStates[index] >= 0 && <span>✅</span>}</td>
+               <td>{transactionStates[index] >= 1 && <span>✅</span>}</td>
+               <td>{transactionStates[index] >= 2 && <span>✅</span>}</td>
+               <td>{transactionStates[index] >= 3 && <span>✅</span>}</td>
+           </tr>
+       <!-- )})}  -->   
+       </tbody>
+  </table>
+</div>
+</div>
+      </div>
+
+      <div class="container-fluid">
+        <h2 class="scroll_info">Scroll table<i class="bi bi-arrow-right-circle-fill"></i></h2>
+      </div>
+    </div>
 
               <section>
  
             </section>
 
-
+ </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
+ </body>
 </html>
+
